@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller">
+    <GridPane layoutX="7.0" layoutY="199.0" prefHeight="180.0" prefWidth="584.0">
+      <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+      </columnConstraints>
+      <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+      </rowConstraints>
+        <children>
+          <Button fx:id="kilometer" mnemonicParsing="false" onAction="#calculateKilometer" prefHeight="58.0"
+                  prefWidth="292.0" text="Kilometers into Meters">
+              <font>
+                  <Font size="17.0"/>
+              </font>
+          </Button>
+          <Button fx:id="fahrenheit" mnemonicParsing="false" onAction="#calculateFahrenheit" prefHeight="58.0"
+                  prefWidth="292.0" text="Fahrenheit into Celsius" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <font>
+                  <Font size="17.0"/>
+              </font>
+          </Button>
+          <Button fx:id="celsius" mnemonicParsing="false" onAction="#calculateCelsius" prefHeight="58.0"
+                  prefWidth="292.0" text="Celsius into Fahrenheit" GridPane.rowIndex="1">
+              <font>
+                  <Font size="17.0"/>
+              </font>
+          </Button>
+          <Button fx:id="Meter" mnemonicParsing="false" onAction="#calculateMeter" prefHeight="58.0" prefWidth="292.0"
+                  text="Meter into Kilometer" GridPane.columnIndex="1">
+              <font>
+                  <Font size="17.0"/>
+              </font>
+          </Button>
+          <Button fx:id="lkr" mnemonicParsing="false" onAction="#calculateLkr" prefHeight="58.0" prefWidth="292.0"
+                  text="LKR  into INR" GridPane.rowIndex="2">
+              <font>
+                  <Font size="17.0"/>
+              </font>
+          </Button>
+          <Button fx:id="inr" mnemonicParsing="false" onAction="#calculateInr" prefHeight="58.0" prefWidth="292.0"
+                  text="INR into LKR" GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <font>
+                  <Font size="17.0"/>
+              </font>
+          </Button>
+          <Button fx:id="Volume" mnemonicParsing="false" onAction="#calculateVolume" prefHeight="58.0"
+                  prefWidth="292.0" text="Volume" GridPane.rowIndex="3">
+              <font>
+                  <Font size="17.0"/>
+              </font>
+          </Button>
+          <Button fx:id="clear" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="58.0" prefWidth="292.0"
+                  text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="3">
+              <font>
+                  <Font size="17.0"/>
+              </font>
+          </Button>
+        </children>
+    </GridPane>
+    <GridPane layoutX="6.0" layoutY="129.0" prefHeight="70.0" prefWidth="584.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="141.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="476.0" minWidth="10.0" prefWidth="443.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <Label alignment="CENTER" prefHeight="46.0" prefWidth="135.0" style="-fx-background-color: #d6d6c2;"
+               text="Number">
+            <font>
+                <Font size="29.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="num" prefHeight="50.0" prefWidth="443.0" promptText="Enter your number"
+                   style="-fx-background-radius: 120;" GridPane.columnIndex="1">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </TextField>
+    </GridPane>
+    <Label fx:id="screen" layoutX="8.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="120.0"
+           prefWidth="584.0" style="-fx-border-color: black;">
+        <font>
+          <Font size="40.0"/>
+        </font>
+    </Label>
+</AnchorPane>
